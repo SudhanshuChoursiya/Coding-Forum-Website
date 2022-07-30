@@ -1,0 +1,137 @@
+html{
+    font-size: 62.5%;   
+}
+
+.thread_image_container{
+    position:relative;
+    border:none;
+    
+}
+
+.thread_image{
+    height:23rem;
+    border:none;
+    object-fit:cover;
+}
+
+.thread_logo_container{
+   position:absolute;
+}
+
+.thread_logo{   
+    width:7rem;    
+    object-fit:contain;
+    opacity:0.7;
+}
+
+
+.form-control{
+    border:0.7px solid black;
+}
+
+.nodatabody{
+    background-color:#6d646d ;
+    color: white;
+    border-radius:1rem;
+}
+
+.nodatabody p{
+    display:inline-block;
+    font-size: 1.34rem;
+}
+
+.nodatabody h4{
+    font-size:1.51rem;
+}
+
+.userlogo{
+width:2.35rem;
+padding:0.25rem;
+}
+
+.user{
+    font-size:1.25rem;
+}
+
+.delete_btn{
+font-size:1.1rem;
+}
+
+.card-body h5{
+font-size:1.55rem ;    
+}
+
+.card-body p{
+    font-size:1.32rem;
+}
+
+.main-title h2{
+    font-size:1.6rem;
+}
+
+.main-title h3{
+    font-size:1.6rem;
+}
+
+
+.question_form label{
+    font-size: 1.3rem;
+}
+
+.question_form input{
+    font-size: 1.3rem;
+}
+
+.question_form textarea{
+    font-size: 1.3rem;
+}
+    
+.question_form button{
+    font-size: 1.1rem;
+}
+
+.alert_box{
+    font-size:1.25rem;
+}
+
+.postbtn{
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1.1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.question_desc{
+     display:flex;       
+}
+
+.question_desc p{
+   display: inline-block;
+   font-size:1.42rem;
+   width:70vw;    
+}
+
+.question-title-body{
+    display: flex;
+}
+
+.question-title-body a{
+    font-size: 1.48rem;
+    width:68vw;
+}

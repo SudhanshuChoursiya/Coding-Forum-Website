@@ -1,0 +1,44 @@
+html{
+    font-size:62.5%;
+}
+
+body{
+    background: url('image/main-background.png');
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading h3{
+color: white;
+font-size:1.9rem;
+    
+}
+
+.label{
+    color:white;
+}
+
+.form-control{
+    border:0.8px solid black
+}
+
+.contact_form label{
+    font-size: 1.3rem;
+}
+
+.contact_form input{
+    font-size: 1.2rem;
+}
+
+.contact_form textarea{
+    font-size: 1.2rem;
+}
+    
+.contact_form button{
+    font-size: 1.1rem;
+}
+
+.alert_box{
+    font-size:1.25rem;
+}

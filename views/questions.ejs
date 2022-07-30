@@ -1,0 +1,176 @@
+<%-include('./partials/header.ejs',{cardsData:cardsData,categoriesNavtitle:categoriesNavtitle,categoriesNavdata:categoriesNavdata,cateid:cateid,loggedin:loggedin}) %>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!-- Favicon link -->
+<link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+
+<link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+
+<link rel="manifest" href="image/site.webmanifest">
+
+<link rel="mask-icon" href="image/safari-pinned-tab.svg" color="#5bbad5">
+
+<meta name="msapplication-TileColor" content="#da532c">
+
+<meta name="theme-color" content="#ffffff">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <title>Questions</title>
+    
+    <link rel="stylesheet" href="questions.css">
+      
+      
+  </head>
+  <body>
+      
+      <% if(success==true){%>
+      <div class="alert alert-success alert-dismissible fade show alert_box mb-0" role="alert">
+  <strong>Sucess!</strong> Your problam has been submitted.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%} else if(error==true){%>
+
+ <div class="alert alert-danger alert-dismissible fade show alert_box mb-0" role="alert">
+  <strong>Error!</strong> Please fill all the required field.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%>
+
+    <% if(deleted==true){%>
+      <div class="alert alert-success alert-dismissible fade show alert_box mb-0" role="alert">
+  <strong>Sucess!</strong> Deleted successfully.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%>
+
+    <div class="card mb-2 border-0 shadow">
+  <div class="d-flex justify-content-center align-items-center w-"> 
+          
+ <div class="thread_image_container w-100">      
+  <img src="image/Background.png" class="card-img-top thread_image" alt="img">
+  </div>
+  
+  <div class="thread_logo_container">
+  <img src="<%=cardsoneData.category_image%>" class="card-img-top thread_logo" alt="img">
+ </div>
+ </div>
+  <div class="card-body">
+    <h5 class="card-title text-center">Welcome To <%=cardsoneData.category_title%> Forum</h5>
+    <p class="card-text text-center"><%=cardsoneData.category_description%></p>
+    <p><small class="text-muted"></small></p>
+  </div>
+</div>
+
+<div class="main-title">
+       <h2 class="text-center my-4">Ask your Query</h2>
+   </div>
+
+    
+    <% if(loggedin==true){%>
+    <form action="/question?cateid=<%=cateid%>" method="post" class="row g-3 mx-4">
+            
+            <div class="col-md-12 question_form">
+    <label for="questitle" class="form-label">Question Title</label>
+    <input type="text" class="form-control" id="questitle" name="questiontitle" minlength="10" maxlength="50" required>
+  </div>
+   
+  <div class="form-floating question_form">
+  <textarea class="form-control " placeholder="describe here" id="floatingTextarea2" style="height: 100px" name="questiondesc" minlength="20" maxlength="200" required></textarea>
+  <label for="floatingTextarea2">Describe your problam</label>
+</div>
+
+<div class="form-floating question_form">
+  <textarea class="form-control" placeholder="describe here" id="floatingTextarea2" style="height: 100px" name="codesnippet" minlength="10" maxlength="250" required></textarea>
+  <label for="floatingTextarea2">Code snippet</label>
+</div>
+  
+  <div class="col-md-6 mt-0">
+   
+    <input type="hidden" value="<%=cardsoneData.cateid%>" class="form-control" id="threadid" name="threadid">
+  </div>
+  
+  <div class="col-md-6 mt-0">
+   
+    <input type="hidden" value="<%=username%>" class="form-control" id="username" name="username">
+  </div>
+   
+   <div class="col-12 question_form">
+    <button type="submit" class="postbtn">Post</button>
+  </div>
+</form>
+
+<%}else{%>
+    <div class="d-flex flex-column nodatabody mx-2 py-4">
+        <h4 class="mb-3 text-center">Please Login To Post Your Queries</h4>
+        <div class="d-flex justify-content-center align-items-center">
+        <a href="/signup"><button class="btn btn-outline-info py-2 mx-2"  type="button">Signup</button></a>
+        
+        <a href="/login"><button class="btn btn-outline-warning py-2"  type="button">Login</button></a> 
+        </div>
+        
+    </div>
+<%}%>
+
+
+
+<div class="main-title">
+    <h3 class="text-center my-4">Problams of Coder’s</h3>
+</div>
+<% if(nodata==true){%>
+    
+    <div class="d-flex flex-column nodatabody mx-2 mb-5 py-4">
+        <h4 class="mt-4 text-center">No Questions Found</h4>
+        
+       <p class="text-center py-2">Be the first one to ask your query</p>
+        
+    </div>
+  
+    
+<%}%>
+
+<!-- questions card start from here -->
+  <% questionDetails.forEach((e)=>{%>
+      
+      <div class="card text-dark bg-light mb-4 mx-2 shadow-sm" w-100>
+  <div class="card-header d-flex justify-content-between py-3">
+      <div class="question-title-body">
+  <a href="/answer?commentid=<%=e._id%>" class="text-decoration-none"><%=e.question_title%></a>
+  </div>
+  <span class="user"><img class="userlogo" src="image/userlogo.png" alt="img"><%=e.username%></span>
+  </div>
+  <div class="card-body d-flex justify-content-between align-items-center">
+      <div class="question_desc">
+    <p class="card-text"><%=e.question_description%></p>
+    </div>
+    <% if(e.username==username){%>
+    <form action="/delete-question?cateid=<%=cateid%>" method="post">
+       <input type="hidden" value="<%=e._id%>" name="boxid"> 
+        
+ <button class="btn btn-success py-2 mx-2 delete_btn" type="submit">Delete</button></form>
+   <% }%>
+  </div>
+</div>
+  <%})%>
+  
+ 
+
+    <script src="frontend.js"></script>
+    
+    <!--Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+<%-include('./partials/footer.ejs',{cardsData:cardsData}) %>

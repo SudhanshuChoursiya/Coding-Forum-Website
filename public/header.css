@@ -1,0 +1,69 @@
+html{
+    font-size:62.5%;
+    height:100vh;
+}
+
+nav{
+    border-bottom:0.3px solid whitesmoke;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    
+}
+
+.logo_container{
+    display: flex;
+    align-items:center;
+}
+
+
+.logo_image{
+    height:2.95rem;
+    width:2.95rem;
+    border-radius: 50%;
+}
+
+.logo_container a{
+    font-size:1.6rem;
+}
+
+.nav-item{
+    font-size: 1.2rem;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+}
+
+.dropdown-item{
+    font-size: 1.1rem;
+}
+
+.form input{
+font-size:1.2rem;
+}
+
+.search-bar::placeholder{
+font-size:1.2rem;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}
+
+.carousel-indicators button{
+   width:2.4rem !important;
+}
+
+.carousel-control-prev-icon{
+    width:2.5rem !important;
+    height: 2.5rem !important;
+}
+
+.carousel-control-next-icon{
+    width:2.5rem !important;
+    height: 2.4rem !important;
+}

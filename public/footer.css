@@ -1,0 +1,12 @@
+html{
+    font-size: 62.5%;
+}
+
+footer{
+    margin-top: auto;
+    background-color:#1c212a;
+    color: whitesmoke;
+    text-align: center;
+    padding: 1.5rem;
+    font-size:1.2rem;    
+}

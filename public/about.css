@@ -1,0 +1,59 @@
+html{
+    font-size:62.5%;
+}
+
+body{
+    background: url('image/main-background.png');
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading{
+    color: white;
+    font-size: 1.9rem;
+}
+
+.buttons{
+    margin-top:1rem;
+}
+
+.explore_btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.explore_btn{
+    margin-right:0.5rem;
+    outline:none;
+    background-color:brown;
+    color:white;
+    cursor: pointer;
+    border-radius:1rem;
+    border: none;
+    padding:0.3rem 1rem;
+    font-size: 1.1rem;
+    
+}
+
+.contact_btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.contact_btn{
+    outline:none;
+    background-color:brown;
+    color:white;
+    cursor: pointer;
+    border-radius: 1rem;
+    border:none;
+    padding:0.3rem 1rem;
+    font-size: 1.1rem;
+}
+
+p1{
+    font-size: 1.3rem;
+    color: whitesmoke;
+    display: inline-block;
+}

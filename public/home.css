@@ -1,0 +1,33 @@
+html{
+    font-size:62.5%;
+}
+
+.slider_image{
+    height:27rem;
+    object-fit:cover;
+    
+}
+
+.cards_image{
+    object-fit:contain;
+    height:6rem;
+    width:6rem;
+    
+}
+
+.card-body h5{
+    font-size: 1.55rem;
+}
+
+.card-body p{
+    font-size: 1.25rem;
+    display: inline-block;
+}
+
+.card-body a{
+    font-size: 1.1rem;
+}
+
+.alert_box{
+    font-size:1.25rem;
+}
