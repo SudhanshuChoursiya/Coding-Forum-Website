@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express=require('express');
 const mongoose=require('mongoose');
 const router=express.Router();
@@ -157,7 +158,7 @@ if(req.session.username){
 
 const username=req.session.username;
 
-fetch("http://localhost:3000/api/posts/questions")
+fetch(process.env.API_QUESTION_URL)
 .then((res)=>{
     return res.json()
 }).then((data)=>{
@@ -213,7 +214,7 @@ const categoriesNavdata=await category.find();
    await questionData.save().then(()=>{
         success=true;
                         
-        fetch("http://localhost:3000/api/posts/questions")
+        fetch(process.env.API_QUESTION_URL)
 .then((res)=>{
     return res.json()
 }).then((data)=>{
@@ -234,7 +235,7 @@ const categoriesNavdata=await category.find();
 }).catch((err)=>{
     error=true;
     
-    fetch("http://localhost:3000/api/posts/questions")
+    fetch(process.env.API_QUESTION_URL)
 .then((res)=>{
     return res.json()
 }).then((data)=>{
@@ -288,7 +289,7 @@ const categoriesNavdata=await category.find();
     }
     
     const username=req.session.username;
-    fetch("http://localhost:3000/api/posts/answers")
+    fetch(process.env.API_ANSWER_URL)
 .then((res)=>{
     return res.json();
 }).then((data)=>{
@@ -344,7 +345,7 @@ const categoriesNavdata=await category.find();
     
     success=true;
     
-    fetch("http://localhost:3000/api/posts/answers")
+    fetch(process.env.API_ANSWER_URL)
 .then((res)=>{
     return res.json();
 }).then((data)=>{
@@ -364,7 +365,7 @@ const categoriesNavdata=await category.find();
 }).catch((err)=>{
     error=true;
         
-fetch("http://localhost:3000/api/posts/answers").then((res)=>{
+fetch(process.env.API_ANSWER_URL).then((res)=>{
     return res.json();
 }).then((data)=>{
     answerDatas=data;
@@ -606,7 +607,7 @@ const categoriesNavdata=await category.find();
   }
     
     
-    fetch("http://localhost:3000/api/posts/questions")
+    fetch(process.env.API_QUESTION_URL)
 .then((res)=>{
     return res.json()
 }).then((data)=>{
@@ -662,7 +663,7 @@ const categoriesNavdata=await category.find();
        console.log(err)
     }
     
-         fetch("http://localhost:3000/api/posts/answers")
+         fetch(process.env.API_ANSWER_URL)
 .then((res)=>{
     return res.json();
 }).then((data)=>{

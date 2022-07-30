@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express=require('express');
 
 const port=process.env.PORT||3000;
@@ -20,7 +22,7 @@ app.set('views',path.join(__dirname,'views'));
 app.use(cors());
 app.use(express.static('public'));
 
-mongoose.connect("mongodb+srv://Sudhanshu77:Sudhanshu2554@cluster0.f1yoynk.mongodb.net/forum_website?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
+mongoose.connect(process.env.MONGO_CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
     console.log("connected to db");
 }).catch((err)=>{
     console.log("not connected to db");
