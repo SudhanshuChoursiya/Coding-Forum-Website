@@ -70,9 +70,11 @@
   <div class="card-header py-3">
   Code-Snippet
   </div>
-  <div class="card-body code">
+  <div class="card-body code mb-4">
    <p class="card-text code-snippet">
+       <span>
      <%=onequestionDetails.code_snippet%>
+     </span>
    </p>  
   </div>
 </div>
@@ -85,16 +87,19 @@
 
 <!-- answers card Start from here -->
    <% answerDetails.forEach((e)=>{%>
-   <div class="card mx-2 shadow-sm text-light bg-dark" w-100>
+   <div class="card mx-2 shadow-sm text-light bg-dark mb-4" w-100>
   <div class="card-header d-flex align-items-center justify-content-between py-3 border-light">
   Sollution <span class="user"><img class="userlogo" src="image/userlogo.png" alt="img"><%=e.username%></span>
   </div>
   <div class="scrolling-container">
   <div class="card-body code d-flex align-items-center justify-content-between useranswer_desc_body">
       
-      <div class="useranswer_desc">
+      <div class="useranswer_desc mb-4">
+          
       <p class="card-text">
+         <span>
       <%=e.answer%>
+      </span>
        </p>
        </div>       
   </div>
@@ -122,15 +127,15 @@
   
 <%}%>
     
-    <div class="main-title">
+    <div class="main-title mb-1">
        <h3 class="text-center my-4">Post your Comment’s</h3>
    </div>
 
     <% if(loggedin==true){%>
-    <form action="/answer?commentid=<%=commentid%>" method="post" class="row g-3 mx-4">
+    <form action="/answer?commentid=<%=commentid%>" method="post" class="row g-3 mx-4 mb-4">
    
   <div class="form-floating answer_form">
-  <textarea class="form-control" placeholder="describe here" id="floatingTextarea2" style="height: 100px" name="answer" minlength="10" maxlength="200" required></textarea>
+  <textarea class="form-control" placeholder="describe here" id="floatingTextarea2" style="height: 100px" name="answer" minlength="10" maxlength="350" required></textarea>
   <label for="floatingTextarea2">Describe your Suggestion</label>
 </div>
 

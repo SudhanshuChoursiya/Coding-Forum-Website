@@ -2,7 +2,7 @@ require('dotenv').config();
 const express=require('express');
 const mongoose=require('mongoose');
 const router=express.Router();
-
+const axios=require('axios');
 const category=require('../models/cards.js');
 
 const contactDetails=require('../models/contactform.js');
@@ -158,22 +158,23 @@ if(req.session.username){
 
 const username=req.session.username;
 
-fetch(process.env.API_QUESTION_URL)
-.then((res)=>{
-    return res.json()
-}).then((data)=>{
-    const questionD=data;
+axios.get(process.env.API_QUESTION_URL)
+.then((response)=>{
+    const questionD=response.data;
     
-    let questionData=questionD.filter(({thread_id})=>thread_id===cateid) 
+     let questionData=questionD.filter(({thread_id})=>thread_id===cateid) 
     let dataCount=questionData.length;
   if(dataCount==0){
       nodata=true;
-  }
-  
-        
-    res.render('questions.ejs',{cardsData:cardsData,cardsoneData:cardsoneData,categoriesNavtitle:categoriesNavtitle,categoriesNavdata:categoriesNavdata,cateid:cateid,success:success,error:error,questionDetails:questionData,nodata:nodata,loggedin:loggedin,username:username,deleted:deleted});
-        
+  }        
+   
+   res.render('questions.ejs',{cardsData:cardsData,cardsoneData:cardsoneData,categoriesNavtitle:categoriesNavtitle,categoriesNavdata:categoriesNavdata,cateid:cateid,success:success,error:error,questionDetails:questionData,nodata:nodata,loggedin:loggedin,username:username,deleted:deleted});
+   
     })
+    
+   
+            
+    
    
  });
 
@@ -214,11 +215,9 @@ const categoriesNavdata=await category.find();
    await questionData.save().then(()=>{
         success=true;
                         
-        fetch(process.env.API_QUESTION_URL)
-.then((res)=>{
-    return res.json()
-}).then((data)=>{
-    const questionD=data;
+        axios.get(process.env.API_QUESTION_URL)
+.then((response)=>{
+    const questionD=response.data;
     
     let questionData=questionD.filter(({thread_id})=>thread_id===cateid)
     let dataCount=questionData.length;
@@ -228,19 +227,14 @@ const categoriesNavdata=await category.find();
     
     
     res.render('questions.ejs',{cardsData:cardsData,cardsoneData:cardsoneData,categoriesNavtitle:categoriesNavtitle,categoriesNavdata:categoriesNavdata,cateid:cateid,success:success,error:error,questionDetails:questionData,nodata:nodata,loggedin:loggedin,username:username,deleted:deleted});
-        
-    
-})
-
+ })
+       
 }).catch((err)=>{
     error=true;
     
-    fetch(process.env.API_QUESTION_URL)
-.then((res)=>{
-    return res.json()
-}).then((data)=>{
-    const questionD=data;
-    console.log(questionD)
+   axios.get(process.env.API_QUESTION_URL)
+.then((response)=>{
+    const questionD=response.data;
    
     let questionData=questionD.filter(({thread_id})=>thread_id===cateid)
     
@@ -251,9 +245,8 @@ const categoriesNavdata=await category.find();
     
     res.render('questions.ejs',{cardsData:cardsData,cardsoneData:cardsoneData,categoriesNavtitle:categoriesNavtitle,categoriesNavdata:categoriesNavdata,cateid:cateid,success:success,error:error,questionDetails:questionData,nodata:nodata,loggedin:loggedin,username:username,deleted:deleted});
     
+      })
     })
-
-  })
 
 });
     
@@ -289,11 +282,10 @@ const categoriesNavdata=await category.find();
     }
     
     const username=req.session.username;
-    fetch(process.env.API_ANSWER_URL)
-.then((res)=>{
-    return res.json();
-}).then((data)=>{
-    answerData=data;
+    
+   axios.get(process.env.API_ANSWER_URL)
+.then((response)=>{
+    const answerData=response.data;
     
     let answerDetail=answerData.filter(({comment_id})=>comment_id===commentid);
     
@@ -303,8 +295,7 @@ const categoriesNavdata=await category.find();
   }
   
     res.render('answer.ejs',{cardsData:cardsData,cardsoneData:cardsoneData,categoriesNavtitle:categoriesNavtitle,categoriesNavdata:categoriesNavdata,cateid:cateid,success:success,error:error,questionDetails:questionDetails,onequestionDetails:onequestionDetails,commentid:commentid,answerDetails:answerDetail,nodata:nodata,loggedin:loggedin,username:username,deleted:deleted});
-    
-    
+        
   })
 }) 
     
@@ -345,11 +336,10 @@ const categoriesNavdata=await category.find();
     
     success=true;
     
-    fetch(process.env.API_ANSWER_URL)
-.then((res)=>{
-    return res.json();
-}).then((data)=>{
-        answerDatas=data;
+   axios.get(process.env.API_ANSWER_URL)
+.then((response)=>{
+    const answerDatas=response.data;
+    
         let answerDetail=answerDatas.filter(({comment_id})=>comment_id===commentid);
         
          let dataCount=answerDetail.length;
@@ -365,10 +355,9 @@ const categoriesNavdata=await category.find();
 }).catch((err)=>{
     error=true;
         
-fetch(process.env.API_ANSWER_URL).then((res)=>{
-    return res.json();
-}).then((data)=>{
-    answerDatas=data;
+axios.get(process.env.API_ANSWER_URL)
+.then((response)=>{
+    const answerDatas=response.data;
     
     let answerDetail=answerDatas.filter(({comment_id})=>comment_id=commentid);
     
@@ -607,11 +596,9 @@ const categoriesNavdata=await category.find();
   }
     
     
-    fetch(process.env.API_QUESTION_URL)
-.then((res)=>{
-    return res.json()
-}).then((data)=>{
-    const questionD=data;
+   axios.get(process.env.API_QUESTION_URL)
+.then((response)=>{
+    const questionD=response.data;
     
     let questionData=questionD.filter(({thread_id})=>thread_id===cateid)
     let dataCount=questionData.length;
@@ -663,11 +650,10 @@ const categoriesNavdata=await category.find();
        console.log(err)
     }
     
-         fetch(process.env.API_ANSWER_URL)
-.then((res)=>{
-    return res.json();
-}).then((data)=>{
-        answerDatas=data;
+         axios.get(process.env.API_ANSWER_URL)
+.then((response)=>{
+    const answerDatas=response.data;
+    
         let answerDetail=answerDatas.filter(({comment_id})=>comment_id===commentid);
         
          let dataCount=answerDetail.length;
