@@ -14,7 +14,7 @@ const mongoose=require('mongoose');
 
 const bodyparser=require('body-parser');
 const cors=require('cors');
-const favicon=require('serve-favicon');
+
 
 app.set('view-engine','ejs');
 app.set('views',path.join(__dirname,'views'));
