@@ -667,4 +667,10 @@ const categoriesNavdata=await category.find();
                
 });            
         
+     router.get('*',(req,res)=>{
+         
+         res.render('notfoundpage.ejs');
+         
+     })  
+        
 module.exports=router;
