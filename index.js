@@ -23,7 +23,7 @@ app.set('views',path.join(__dirname,'views'));
 app.use(cors());
 app.use(express.static('public'));
 
-app.use(favicon(__dirname+'/favicon.ico'));
+app.use(favicon(__dirname+'/favicon.png'));
 
 mongoose.connect(process.env.MONGO_CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
     console.log("connected to db");
