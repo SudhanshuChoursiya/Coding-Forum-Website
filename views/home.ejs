@@ -26,7 +26,6 @@
 
 
 <!-- Slider starts from here -->
-
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -76,7 +75,7 @@
   <div class="card-body">
     <h5 class="card-title"><%=e.category_title%> Forum</h5>
     
-    <p class="card-text"><%=e.category_description.substring(0,174)+"..."%></p>
+    <p class="card-text"><%=e.category_description.substring(0,173)+"..."%></p>
     
     <a href="/question?cateid=<%=e.cateid%>" class="btn btn-primary">Click to ask Questions</a>
   </div>
