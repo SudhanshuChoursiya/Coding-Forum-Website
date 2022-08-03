@@ -20,18 +20,18 @@ body{
 }
 
 .card-body h5{
-    font-size: 1.75rem;
+    font-size: 1.77rem;
     display: inline-block;
 }
 
 
 .card-body p{
-    font-size: 1.45rem;
+    font-size: 1.5rem;
     display:inline-block;
 }
 
 .card-body a{
-    font-size: 1.35rem;
+    font-size: 1.38rem;
 }
 
 .alert_box{
@@ -49,7 +49,7 @@ body{
 
 .main-card{
     min-width:100%;
-    border-radius:1.4rem;
+    border-radius:1.5rem;
 }
 
 
@@ -66,7 +66,7 @@ body{
 @media(min-width:1024px) and (max-width:2200px){
     
     .slider_image{
-    height:68vh;
+    height:65vh;
     object-fit:cover;     
     }
     
@@ -76,7 +76,7 @@ body{
 @media(min-width:2201px) and (max-width:4500px){
     
     .slider_image{
-    height:76vh;
+    height:75vh;
     object-fit:cover;    
     }
 
