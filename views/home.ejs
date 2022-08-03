@@ -35,16 +35,16 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active slider-image-carousel">
       <img src="image/img1.png" class="d-block w-100 slider_image" alt="img">
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item slider-image-carousel">
       <img src="image/img2.png" class="d-block w-100 slider_image" alt="img">
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item slider-image-carousel">
       <img src="image/img3.png" class="d-block w-100 slider_image" alt="img">
     </div>
-     <div class="carousel-item slider_image">
+     <div class="carousel-item slider-image-carousel">
       <img src="image/img4.png" class="d-block w-100 slider_image" alt="img">
     </div>
   </div>
@@ -59,24 +59,25 @@
 </div>
 
 
-<div>
-    <h3 class="text-center mt-4">Browse Categories</h3>
+<div class="main-title">
+    <h3 class="text-center mt-5">Browse Categories</h3>
 </div>
 
 
 <!-- cards start from here -->
-
-<div class="d-flex justify-content-center flex-wrap my-2 mb-4">
+<div class="d-flex justify-content-center flex-wrap align-items-center my-2 mb-4 main-card-container">
     
     <% cardsData.forEach((e)=>{ %>
         
-         <div class="card mx-2 my-2 shadow text-center" style="width: 18rem;">
+         <div class="card my-4 shadow main-card text-center" style="width: 18rem;">
   <div class="mt-2">          
   <img src="<%=e.category_image%>" class="card-img-top cards_image" alt="img">
   </div>
   <div class="card-body">
-    <h5 class="card-title"><%=e.category_title%></h5>
-    <p class="card-text"><%=e.category_description.substring(0,108)+"..."%></p>
+    <h5 class="card-title"><%=e.category_title%> Forum</h5>
+    
+    <p class="card-text"><%=e.category_description.substring(0,179)+"..."%></p>
+    
     <a href="/question?cateid=<%=e.cateid%>" class="btn btn-primary">Click to ask Questions</a>
   </div>
 </div>

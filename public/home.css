@@ -2,32 +2,82 @@ html{
     font-size:62.5%;
 }
 
+body{
+    background-color: whitesmoke;
+}
+
 .slider_image{
-    height:27rem;
-    object-fit:cover;
-    
+    height:38vh;
+    object-fit:cover; 
 }
 
 .cards_image{
     object-fit:contain;
-    height:6rem;
-    width:6rem;
+    height:6.5rem;
+    width:6.5rem;
+    margin-top: 0.4rem;
     
 }
 
 .card-body h5{
-    font-size: 1.55rem;
-}
-
-.card-body p{
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     display: inline-block;
 }
 
+
+.card-body p{
+    font-size: 1.45rem;
+    display:inline-block;
+}
+
 .card-body a{
-    font-size: 1.1rem;
+    font-size: 1.35rem;
 }
 
 .alert_box{
     font-size:1.25rem;
+}
+
+.main-title h3{
+    font-size:1.8rem !important;
+}
+
+.main-card-container{
+    width:90vw;
+    margin: auto;
+}
+
+.main-card{
+    min-width:100%;
+    border-radius:1.4rem;
+}
+
+
+@media(min-width:990px) and (max-width:1023px){
+    
+    .slider_image{
+    height:45vh;
+    object-fit:cover;    
+    }
+
+}
+
+
+@media(min-width:1024px) and (max-width:2200px){
+    
+    .slider_image{
+    height:68vh;
+    object-fit:cover;     
+    }
+    
+}
+
+
+@media(min-width:2201px) and (max-width:4500px){
+    
+    .slider_image{
+    height:76vh;
+    object-fit:cover;    
+    }
+
 }

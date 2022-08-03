@@ -7,34 +7,16 @@ html{
     font-size: 62.5%;   
 }
 
-.thread_image_container{
-    position:relative;
-    border:none;
-    
-}
-
-.thread_image{
-    height:23rem;
-    border:none;
-    object-fit:cover;
-}
-
-.thread_logo_container{
-   position:absolute;
-}
-
-.thread_logo{   
-    width:7rem;    
-    object-fit:contain;
-    opacity:0.7;
+body{
+    background-color: whitesmoke;
 }
 
 .card-text{
-    font-size:0.9rem;
+    font-size:1.5rem;
 }
 
 .card-header a{
-    font-size:1.3rem;
+    font-size:1.52rem;
 }
 
 .form-control{
@@ -48,7 +30,7 @@ html{
 }
 
 .nodatabody h4{
-    font-size:1.4rem;
+    font-size:1.52rem;
 }
 
 
@@ -59,7 +41,7 @@ margin:1rem 1.6rem;
 
 .noresultfound p{
    margin-bottom: 0;
-  font-size:1.5rem;
+  font-size:1.47rem;
 }
 
 .userlogo{
@@ -68,18 +50,15 @@ padding:0.2rem;
 }
 
 .user{
-    font-size:1.2rem;
+    font-size:1.3rem;
 }
 
-.card-body h5{
-font-size:1.7rem;    
-}
 
 .card-body p{
-    font-size:1.3rem;
+    font-size:1.4rem;
     
 }
 
 .nodatabody ul li{    
-    font-size:1.3rem;
+    font-size:1.32rem;
 }

@@ -2,14 +2,17 @@ html{
     font-size: 62.5%;   
 }
 
+body{
+    background-color: whitesmoke;
+}
+
 .thread_image_container{
     position:relative;
-    border:none;
-    
+    border:none; 
 }
 
 .thread_image{
-    height:23rem;
+    height:34vh;
     border:none;
     object-fit:cover;
 }
@@ -19,9 +22,9 @@ html{
 }
 
 .thread_logo{   
-    width:7rem;    
+    width:8rem;    
     object-fit:contain;
-    opacity:0.8;
+    opacity:0.9;
 }
 
 
@@ -36,12 +39,12 @@ html{
 }
 
 .nodatabody p{
-    display:inline-block;
-    font-size: 1.34rem;
+    display: inline-block;
+    font-size: 1.39rem;
 }
 
 .nodatabody h4{
-    font-size:1.51rem;
+    font-size:1.58rem;
 }
 
 .userlogo{
@@ -50,45 +53,44 @@ padding:0.25rem;
 }
 
 .user{
-    font-size:1.25rem;
+    font-size:1.33rem;
+    word-break:break-word;  
+    width: 32%;
 }
 
 .delete_btn{
-font-size:1.1rem;
+font-size:1.15rem;
 }
 
 .card-body h5{
-font-size:1.55rem ;    
+font-size:1.72rem ;    
 }
 
 .card-body p{
-    font-size:1.32rem;
+    font-size:1.37rem;
 }
 
 .main-title h2{
-    font-size:1.6rem;
+    font-size:1.7rem;
 }
 
 .main-title h3{
-    font-size:1.6rem;
+    font-size:1.7rem;
 }
 
 
 .question_form label{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .question_form input{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .question_form textarea{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
     
-.question_form button{
-    font-size: 1.1rem;
-}
 
 .alert_box{
     font-size:1.25rem;
@@ -109,7 +111,7 @@ font-size:1.55rem ;
     background-color: transparent;
     border: 1px solid transparent;
     padding: .375rem .75rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     color: #fff;
@@ -118,20 +120,88 @@ font-size:1.55rem ;
 }
 
 .question_desc{
-     display:flex;       
+     display:flex;   
 }
 
 .question_desc p{
    display: inline-block;
-   font-size:1.42rem;
-   width:70vw;    
+   font-size:1.43rem;
+   word-break:break-word;
 }
 
 .question-title-body{
-    display: flex;
+    display:flex;
+    width:68%;
+   
 }
 
 .question-title-body a{
-    font-size: 1.48rem;
-    width:68vw;
+    font-size: 1.54rem;  
+    word-break:break-word;
+    margin-right:0.5rem;
+}
+
+.deletebtnbody{
+    display:flex;
+    align-items:center;
+    justify-content:end;
+    margin-bottom:0.5rem;
+    margin-right:0.5rem;
+}
+
+
+@media(min-width:990px) and (max-width:1023px){
+    
+    .thread_image{
+    height:42vh;
+    }
+    
+    .thread_logo{   
+    width:9rem;    
+    }
+    
+    .buttonofdelete{
+    position:absolute;
+    bottom:0.8rem;
+    right:2.4rem;
+}
+
+}
+
+
+@media(min-width:1024px) and (max-width:2200px){
+    
+   .thread_image{
+    height:65vh;
+    }
+    
+    .thread_logo{   
+    width:10rem;    
+    }
+    
+     .buttonofdelete{
+    position:absolute;
+    bottom:0.8rem;
+    right:2.4rem;
+}
+    
+}
+
+
+@media(min-width:2201px) and (max-width:4500px){
+    
+    .thread_image{
+    height:75vh;
+    }
+   
+    .thread_logo{   
+    width:12rem;    
+    }
+  
+     .buttonofdelete{
+    position:absolute;
+    bottom:0.8rem;
+    right:2.4rem;
+}
+
 }

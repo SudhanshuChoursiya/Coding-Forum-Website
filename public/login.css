@@ -17,44 +17,12 @@ body{
     margin-top:1rem;
 }
 
-.explore_btn a{
-    color: white;
-    text-decoration: none;
-}
-
-.explore_btn{
-    margin-right:0.5rem;
-    outline:none;
-    background-color:brown;
-    color:white;
-    cursor: pointer;
-    border-radius:1rem;
-    border: none;
-    padding:0.3rem 1rem;
-    
-}
-
-.contact_btn a{
-    color: white;
-    text-decoration: none;
-}
-
-.contact_btn{
-    outline:none;
-    background-color:brown;
-    color:white;
-    cursor: pointer;
-    border-radius: 1rem;
-    border:none;
-    padding:0.3rem 1rem;
-}
-
 p1{
     color: whitesmoke;
 }
 
 .logincontainer{
-height:100vh;
+    height:100vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -62,19 +30,19 @@ height:100vh;
 }
 
 .modal-title{
-    font-size:1.4rem;
+    font-size:1.7rem;
 }
 
 .login_form label{
-    font-size:1.3rem;
+    font-size:1.5rem;
 }
 
 .login_form input{
-    font-size:1.3rem;
+    font-size:1.5rem;
 }
 
 .login_form button{
-    font-size:1.1rem ;
+    font-size:1.2rem ;
 }
 
 .alert_box{

@@ -13,10 +13,6 @@
     <title>Answers</title>
     
     <link rel="stylesheet" href="answer.css">
-     
-      <!-- Favicon links -->
-     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
- 
 
   </head>
   <body>
@@ -42,25 +38,27 @@
 <%}%>
       
         <div>
-         <div class="card text-light bg-danger mx-2 shadow-lg my-5" w-100>
-  <div class="card-header d-flex justify-content-between question-title-body">
-    <div class="question-title-body"> <h1><%=onequestionDetails.question_title%></h1>
-    </div>
-      <span class="user"><img class="userlogo" src="image/userlogo.png" alt="img"><%=onequestionDetails.username%></span>
+         <div class="card text-light bg-danger shadow-lg my-5 main-card-container">
+  <div class="card-header d-flex justify-content-between question-title-body my-1">
+  <div class="question-title mt-2"> <h1><%=onequestionDetails.question_title%></h1>
+  </div>
+      <div class="user d-flex align-items-center justify-content-end"><img class="userlogo" src="image/userlogo.png" alt="img"><%=onequestionDetails.username%></div>
   </div>
   <div class="card-body question_desc_body">
+      
     <p class="card-text mb-2">
         <%=onequestionDetails.question_description%>
+     
     </p>
   </div>
 </div>
 
-<div class="card text-dark bg-light mx-2 shadow-sm" w-100>
+<div class="card text-dark bg-light shadow-sm code-snippet-body">
   <div class="card-header py-3">
   Code-Snippet
   </div>
   <div class="card-body code mb-4">
-   <p class="card-text code-snippet">
+   <p class="code-snippet">
        <span>
      <%=onequestionDetails.code_snippet%>
      </span>
@@ -76,17 +74,22 @@
 
 <!-- answers card Start from here -->
    <% answerDetails.forEach((e)=>{%>
-   <div class="card mx-2 shadow-sm text-light bg-dark mb-4" w-100>
+   <div class="card shadow-sm text-light bg-dark mb-4 answer-card-body">
   <div class="card-header d-flex align-items-center justify-content-between py-3 border-light">
-  Sollution <span class="user"><img class="userlogo" src="image/userlogo.png" alt="img"><%=e.username%></span>
+      <div class="title-body">
+       Sollution 
+      </div>
+  
+  <div class="user d-flex align-items-center justify-content-end"><img class="userlogo" src="image/userlogo.png" alt="img"><%=e.username%></div>
   </div>
+  
   <div class="scrolling-container">
   <div class="card-body code d-flex align-items-center justify-content-between useranswer_desc_body">
       
-      <div class="useranswer_desc mb-4">
+      <div class="useranswer_desc">
           
-      <p class="card-text">
-         <span>
+      <p class="card-content">
+         <span class="mb-4">
       <%=e.answer%>
       </span>
        </p>
@@ -107,7 +110,7 @@
 
 <% if(nodata==true){%>
     
-    <div class="d-flex flex-column nodatabody mx-2 mb-4">
+    <div class="d-flex flex-column nodatabody mx-4 mb-4">
         <h4 class="mt-4 text-center">No Sollution yet</h4>
         
        <p class="text-center py-2">Be the first one to help</p>
@@ -121,11 +124,10 @@
    </div>
 
     <% if(loggedin==true){%>
-    <form action="/answer?commentid=<%=commentid%>" method="post" class="row g-3 mx-4 mb-4">
+    <form action="/answer?commentid=<%=commentid%>" method="post" class="row g-3 container mx-auto mb-4">
    
-  <div class="form-floating answer_form">
-  <textarea class="form-control" placeholder="describe here" id="floatingTextarea2" style="height: 100px" name="answer" minlength="10" maxlength="350" required></textarea>
-  <label for="floatingTextarea2">Describe your Suggestion</label>
+  <div class="form answer_form mt-4">
+  <textarea class="form-control" placeholder="Describe your suggestion" id="floatingTextarea2" style="height: 100px" name="answer" minlength="10" maxlength="350" required></textarea>
 </div>
 
  
@@ -145,12 +147,12 @@
 </form>
      
 <%}else{%>
-    <div class="d-flex flex-column nodatabody py-4 mx-2 mb-5">
+    <div class="d-flex flex-column nodatabody py-4 mx-4 mb-5">
         <h4 class="mb-3 text-center">Please Login To Post Your Sollutions</h4>
         <div class="d-flex justify-content-center align-items-center">
-        <a href="/signup"><button class="btn btn-outline-info py-2 mx-2"  type="button">Signup</button></a>
+        <a href="/signup"><button class="btn btn-info py-2 mx-2"  type="button">Signup</button></a>
         
-        <a href="/login"><button class="btn btn-outline-warning py-2"  type="button">Login</button></a> 
+        <a href="/login"><button class="btn btn-warning py-2"  type="button">Login</button></a> 
         </div>        
     </div>
 <%}%>

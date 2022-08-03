@@ -11,7 +11,7 @@ body{
 
 .heading h3{
 color: white;
-font-size:1.9rem;
+font-size:2.2rem;
     
 }
 
@@ -24,19 +24,23 @@ font-size:1.9rem;
 }
 
 .contact_form label{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .contact_form input{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .contact_form textarea{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+}
+
+.contact_form textarea::placeholder{
+    font-size: 1.4rem;
 }
     
 .contact_form button{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .alert_box{
