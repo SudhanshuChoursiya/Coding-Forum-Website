@@ -48,6 +48,7 @@ font-size:1.25rem;
 
 .search-bar::placeholder{
 font-size:1.25rem;
+line-height:2rem;
 }
 
 .navbar-toggler:focus{
