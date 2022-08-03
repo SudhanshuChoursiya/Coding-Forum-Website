@@ -44,16 +44,13 @@ body{
 
 .main-card-container{
     width:90vw;
-    margin: auto;
-    display:flex;
-    flex-direction:column !important;
-    align-items: center !important;
+    margin: 0 auto;   
 }
 
 .main-card{ 
+    min-width:100%;
     border-radius:1.5rem;
 }
-
 
 @media(min-width:990px) and (max-width:1023px){
     
