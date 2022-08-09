@@ -386,7 +386,7 @@ const categoriesNavtitle="Categories";
     
     if(req.session.username){
     loggedin=true;
-    res.redirect('/home');
+    res.redirect('/');
     }else{
     res.render('signup.ejs',{cardsData:cardsData,categoriesNavtitle:categoriesNavtitle,categoriesNavdata:categoriesNavdata,error:error,success:success,passnotmatch:passnotmatch,loggedin:loggedin});
          }
@@ -460,7 +460,7 @@ const categoriesNavtitle="Categories";
     
 if(req.session.username){
     loggedin=true;
-    res.redirect('/home');
+    res.redirect('/')
 }else{
     res.render('login.ejs',{cardsData:cardsData,categoriesNavtitle:categoriesNavtitle,categoriesNavdata:categoriesNavdata,error:error,success:success,passnotmatch:passnotmatch,loggedin:loggedin});
     }
