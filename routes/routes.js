@@ -492,7 +492,7 @@ const categoriesNavtitle="Categories";
   if(userMatch){
       const passMatch=await bcrypt.compare(userpassword,userMatch.password);
       if(passMatch){
-      req.session.username=username;
+      req.session.username=userMatch.username;
       res.redirect('/home');
       
       }
