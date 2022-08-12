@@ -99,9 +99,9 @@
    <% if(e.username==username){%>
          <div class="buttonofdelete">
     <form action="/delete-answer?commentid=<%=commentid%>" method="post">
-       <input type="hidden" value="<%=e._id%>" name="boxid"> 
+       <input type="hidden" value="<%=e._id%>" name="boxid" id="inputvalue"> 
         
- <button class="btn btn-success py-2 mx-2 delete_btn" type="submit">Delete</button></form>
+ <button class="btn btn-success py-2 mx-2 delete_btn" type="submit" onclick="deletepopup()">Delete</button></form>
      </div>
    <% }%>
 </div>

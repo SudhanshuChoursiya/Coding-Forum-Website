@@ -53,7 +53,7 @@ padding:0.25rem;
 }
 
 .user{
-    font-size:1.33rem;
+    font-size:1.34rem;
     word-break:break-word;  
     width: 32%;
 }
@@ -125,7 +125,7 @@ font-size:1.72rem ;
 
 .question_desc p{
    display: inline-block;
-   font-size:1.55rem;
+   font-size:1.53rem;
    word-break:break-word;
 }
 
@@ -136,7 +136,7 @@ font-size:1.72rem ;
 }
 
 .question-title-body a{
-    font-size: 1.54rem;  
+    font-size: 1.6rem;  
     word-break:break-word;
     margin-right:0.5rem;
 }
