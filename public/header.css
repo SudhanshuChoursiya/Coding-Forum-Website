@@ -31,23 +31,23 @@ body{
 }
 
 .nav-item{
-    font-size: 1.35rem;
+    font-size: 1.41rem;
 }
 
 .nav-link{
-    font-size: 1.35rem;
+    font-size: 1.41rem;
 }
 
 .dropdown-item{
-    font-size: 1.25rem;
+    font-size: 1.38rem;
 }
 
 .form input{
-font-size:1.25rem;
+font-size:1.315rem;
 }
 
 .search-bar::placeholder{
-font-size:1.25rem;
+font-size:1.315rem;
 padding:0.5rem 0;
 margin-top:0.2rem;
 }
@@ -71,5 +71,5 @@ margin-top:0.2rem;
 }
 
 .btn{
-    font-size:1.14rem !important;
+    font-size:1.15rem !important;
 }

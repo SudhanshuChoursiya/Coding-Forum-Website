@@ -40,11 +40,11 @@ body{
 
 .nodatabody p{
     display: inline-block;
-    font-size: 1.39rem;
+    font-size: 1.55rem;
 }
 
 .nodatabody h4{
-    font-size:1.58rem;
+    font-size:1.62rem;
 }
 
 .userlogo{
@@ -125,7 +125,7 @@ font-size:1.72rem ;
 
 .question_desc p{
    display: inline-block;
-   font-size:1.53rem;
+   font-size:1.58rem;
    word-break:break-word;
 }
 
