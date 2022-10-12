@@ -148,6 +148,13 @@ font-size:1.72rem ;
     margin-right:0.5rem;
 }
 
+.modal-body{
+    font-size:1.8rem;
+}
+
+.modal-footer button{
+    font-size: 1.3rem!important;
+}
 
 @media(min-width:990px) and (max-width:1023px){
     

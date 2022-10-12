@@ -52,3 +52,14 @@ p1{
 .modal-footer a{
     font-size:1.31rem;
 }
+
+.input-password{
+    position: relative;
+}
+
+.eye_icon_container{
+    position: absolute;
+    top: 14%;
+    right: 1rem;
+    font-size: 1.7rem;
+}

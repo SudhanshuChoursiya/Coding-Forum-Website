@@ -39,4 +39,4 @@ app.use(bodyparser.json());
 app.use('',routes);
 
 
-app.listen(port,()=>{console.log("server is running...")});
+app.listen(port,()=>{console.log(`server is running on port ${port}`)});

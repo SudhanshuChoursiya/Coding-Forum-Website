@@ -7,6 +7,7 @@ nav{
     border-bottom:0.3px solid whitesmoke;
 }
 
+
 body{
     display: flex;
     flex-direction: column;
@@ -21,13 +22,13 @@ body{
 
 
 .logo_image{
-    height:2.95rem;
-    width:2.95rem;
+    height:3.2rem;
+    width:3.2rem;
     border-radius: 50%;
 }
 
 .logo_container a{
-    font-size:1.6rem;
+    font-size:1.65rem;
 }
 
 .nav-item{

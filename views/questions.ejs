@@ -37,6 +37,9 @@
 </div>
 <%}%>
 
+    
+
+
     <div class="card mb-2 border-0 shadow">
   <div class="d-flex justify-content-center align-items-center w-"> 
           
@@ -143,11 +146,34 @@
   </div>
   
   <% if(e.username==username){%>
-    <div class="deletebtnbody">
-    <form action="/delete-question?cateid=<%=cateid%>" method="post">
-       <input type="hidden" value="<%=e._id%>" name="boxid" id="inputvalue"> 
+  
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
         
- <button class="btn btn-success py-2 mx-2 delete_btn" type="submit" onclick="deletepopup()" id="deletebtn">Delete</button></form>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        are you sure you want to delete? 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        
+        <form action="/delete-question?cateid=<%=cateid%>" method="post">
+       <input type="hidden" value="<%=e._id%>" name="boxid" id="inputvalue"> 
+        <button type="submit" class="btn btn-primary">Yes</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  
+    <div class="deletebtnbody">        
+ <button class="btn btn-success py-2 mx-2 delete_btn" type="button" id="deletebtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Delete</button>
  </div>
    <% }%>
 </div>

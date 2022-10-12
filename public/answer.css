@@ -181,6 +181,16 @@ font-size:1.15rem;
     align-items:center;        
 }
 
+.modal-body{
+    font-size: 1.8rem;
+    color: black!important;
+}
+
+.modal-footer button{
+    font-size: 1.3rem!important;
+}
+
+
 @media(min-width:990px) and (max-width:1023px){
     
     .thread_image{
