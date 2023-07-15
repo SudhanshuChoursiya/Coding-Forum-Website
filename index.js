@@ -32,7 +32,7 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL,{useNewUrlParser:true,useUnifi
 })
 
 
-app.use(bodyparser.urlencoded({extended:false}));
+app.use(bodyparser.urlencoded({extended:true}));
 
 app.use(bodyparser.json());
 
